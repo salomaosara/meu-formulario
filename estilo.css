@@ -1,0 +1,137 @@
+body {
+    font-family: Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans;
+    background-color: rgb(255, 219, 240);
+}
+h1 {
+    color: rgb(0, 156, 184);
+    text-align: center;
+}
+
+p{
+    color: darkgray;
+    text-align: center;
+}
+
+form {
+    background-color: rgb(254, 246, 255);
+    width: 750px;
+    border-radius: 20px;
+    min-height: 90vh;
+    padding: 20px;
+    box-shadow: 12px 12px 2px 1px rgb(230, 200, 240);
+    margin:auto
+}
+
+.formgroup{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.formgroup label{
+    font-weight: bold;
+    padding-bottom: 5px;
+    
+}
+
+.formgroup input{
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.aviso{
+    color: darkred;
+    font-size: 12px;
+    margin-top:2px;
+    display: none;
+}
+
+input:valid{
+    border: 2px solid rgb(94, 124, 10);
+}  
+
+
+input:invalid{ 
+    border-color: 2px solid red;
+}
+
+input:invalid + .aviso{
+    display: block;
+}
+
+input:focus, select:focus, textarea:focus, button:focus{
+    outline: 3px solid rgb(9, 9, 174);
+    box-shadow: 0 0 8px rgb(74, 161, 249);
+}
+
+button {
+    background-color: #e7a3c9;
+    color: aliceblue;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 40%;
+}
+
+button:hover{
+    background-color: #ce7aa9;
+    border: none;
+}
+
+.buttongroup{
+    display: flex;
+    justify-content: space-around;   
+}
+
+.buttongroup:valid{
+    border: none;
+}
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+.radio-option {
+    display: flex;
+    align-items: center;
+}
+.radio-option input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+.radio-option label {
+    display: inline;
+    margin: 0;
+    font-weight: normal;
+}
+
+#tel{
+    height: 35px;
+}
+
+#data{
+    width: 170px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 0;
+}
+legend {
+    font-weight: bold;
+    padding: 0 5px;
+}

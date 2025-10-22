@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Sara - Exercício de Formulário</title>
+</head>
+<body>
+    <div class="form">
+      <h1>Exercício de Formulário</h1>
+      <p> Pressione Alt + Tecla sublinha para acessar os campos rapidamente.
+        Use Tab para navegar entre os campos.</p>
+    <form name="formulario">
+    <div class="formgroup">
+
+            <label for="nome"> Nome Completo*:</label>
+            <input type="text" name="nome" maxlength="50" minlength="3" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+">
+            <span class="aviso">Nome deve conter apenas letras e ter no minimo 3 caracteres</span>
+    </div>
+    <div class="formgroup">
+        <label for="email">Email*:</label>
+        <input type="email" name="email" required>
+        <span class="aviso">Insira um email valido (exemplo: usuario@dominio.com)</span>
+    </div>
+    <div class="formgroup">
+        <label for="cpf">CPF*</label>
+        <input type="text" name="cpf" required pattern="[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}" placeholder="000.000.000-00">
+    </div>
+        
+    <div class="formgroup">
+            <fieldset>
+                <legend>Tipo de Usuário *</legend>
+    <div class="radio-group">
+    <div class="radio-option">
+                        <input type="radio" id="aluno" name="tipo-usuario" value="aluno" >
+                        <label for="aluno">Aluno</label>
+    </div>
+
+    <div class="radio-option">
+                        <input type="radio" id="professor" name="tipo-usuario" value="professor">
+                        <label for="professor">Professor</label>
+    </div>
+    <div class="radio-option">
+                        <input type="radio" id="estudante" name="tipo-usuario" value="estudante">
+                        <label for="estudante">Visitante</label>
+    </div>
+    </div>
+                <span class="aviso">Selecione um tipo de usuário</span>
+            </fieldset>
+    </div>
+        
+    <div class="formgroup">
+            <label for="tel">Telefone *</label>
+            <input type="tel" id="tel" name="tel" maxlength="16" minlength="10"  placeholder="(xx)xxxxx-xxxx" required>
+            <span class="aviso">Digite um telefone válido (ex: (11) 98765-4321</span>
+    </div>
+    <div class="formgroup">
+         <label name="datanasc">Data de Nascimento*:</label>
+         <input type="date" id="data" name="datanasc">
+    </div>
+    <div class="formgroup">
+         <label name="website">Website</label>
+         <input type="url" name="website">
+    </div>
+    <div class="formgroup">
+         <label name="estado">Estado*</label>
+            <select id="estado" name="estado">
+            <option value="Selecione o estado" style="color: gray;">Selecione o estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+        </select>
+    </div>
+    <div class="formgroup">
+        <label for="senha">Senha*</label>
+        <input type="password" name="senha" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}">
+        <span class="aviso">A senha deve conter pelo menos 8 caracteres, incluindo maiúsculas, minúsculas, números e caracteres especiais</span>
+        <label for="csenha">Confirmar Senha *</label>
+        <input type="password" name="csenha"required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}">       
+    </div>
+
+    <div>
+        <label for="cor">Cor Favorita</label>
+        <input type="color" name="cor">
+    </div>
+    
+    <div>
+        <label for="nivel">Nível de Conhecimento em HTML(1-5)</label>
+        <input type="range" min="1" max="5">
+    </div>
+    <div>
+        <label for="termo">Concordo com os termos e condições</label>
+        <input required style="width: auto; margin-right: 10px;" type="checkbox" name="termo">
+    </div>
+
+    <div>
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" rows="5"></textarea>
+    </div>
+
+    <div class="buttongroup">
+         <button type="reset" value="Limpar Formulário">Limpar Formulário</button>
+        <button type="submit" value="Enviar Cadastro">Enviar Cadastro </button>
+
+        </div>
+    </form>
+    </div>
+</body>
+</html>
